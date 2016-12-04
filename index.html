@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta property="og:url"           content="" />
+  <meta property="og:type"          content="website" />
+  <meta property="og:title"         content="PHY6 | Sign Up" />
+  <meta property="og:description"   content="Sign Up for monthly newsletter" />
+  <meta property="og:image"         content="" />
+
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>PHY6 | Sign Up</title>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div align="center">
+    	<br /><br />
+    	<img src="6i.jpg" id="logo" />
+    </div><br /><br />
+    <iframe src="#" id="no-target" name="no-target" style="visibility:hidden;"></iframe>
+    <div class="col-lg-4"></div>
+    <div class="col-lg-4">
+    <form id="signup_form" name="signup_form" action="" method="POST" target="no-target">
+    	<div class="form-group row">
+    		<div class="">
+    			<label for="username">Name<span style="color: red;">*</span></label>
+    			<input type="text" class="form-control" name="username" required id="username" placeholder="Name">
+    		</div>
+    	</div>
+    	<div class="form-group row">
+    		<div class="">
+    			<label for="useremail">Email<span style="color: red;">*</span></label>
+    			<input class="form-control" required type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" name="useremail" id="useremail" placeholder="Email">
+    		</div>
+    	</div>
+        <div class="row">
+            <span style="color:red;">* marked fields are mandatory.</span>
+        </div>
+    	<div align="center"><br /><br />
+  		<input type="submit" name="submit" id="submit" value="Sign Up" class="btn btn-primary"></button></div>
+    </form>
+    </div>
+    <div class="col-lg-4"></div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script>
+    	$('#signup_form').one('submit', function(){
+    		var username = encodeURIComponent($('#username').val());
+    		var useremail = encodeURIComponent($('#useremail').val());
+    		var baseURL = 'https://docs.google.com/forms/d/1IbZvBG-dvxsrbA-LdA5PePK6PUelRRfGo68UqpiYMho/formResponse?entry.2041685849=';
+    		var submitURL = (baseURL + username + '&entry.1885327188=' + useremail + '&submit=submit');
+    		$(this)[0].action=submitURL;
+    		//$('#username').addClass('active').val('Thank You!');
+    		//$('#useremail').addClass('active').val('Thank You!');
+    		setTimeout(function(){
+    			$('#form-container').hide();
+    			$('#update-form').animate({'width' : '0px'},300,function(){
+    				$('#get-updates-link').hide();
+    			});
+    		},1000);
+    		setTimeout(function(){
+    			window.location = "thanku.html";
+    		},1000);
+    	});
+    </script>
+  </body>
+</html>
