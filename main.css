@@ -5,3 +5,13 @@ img#logo{
 img#einstein{
 	height: 360px;
 }
+div#maincontentback{
+	height: 450px;
+}
+
+div#maincontent{
+	
+}
+div{
+	-webkit-transition: all 0.4s ease;
+}
