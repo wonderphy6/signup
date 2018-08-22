@@ -72,7 +72,11 @@
                                     <input type="radio" name="country" id="country_2" value="small" />
                                     <label class="radiolabel" for="country_2">Outside India</label>
                                 </div>
-
+                                <div class="col-lg-12" align="center">
+                                    <span id="desc" style="color: white; text-align: center; font-family: 'Poppins', sans-serif;">
+                                        One time payment of INR 100
+                                    </span> 
+                                </div>
                         </div>
 
                         <div align="center"><br /><br />
@@ -106,6 +110,16 @@
                     $("#maincontentback").css("margin-top", "0px");
                 }
             });
+
+            $("input[type=radio][name=country]").change(() => {
+                if ($("#country_1").prop("checked"))
+                    document.getElementById("desc").innerHTML = "One time payment of INR 100";
+
+                if ($("#country_2").prop("checked"))
+                    document.getElementById("desc").innerHTML = "One time payment of USD 2";
+            
+            });
+                
             $('#signup_form').one('submit', function(){
             var username = encodeURIComponent($('#username').val());
             var useremail = encodeURIComponent($('#useremail').val());
