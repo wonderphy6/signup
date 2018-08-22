@@ -13,6 +13,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
         <title>PHY6 | Sign Up</title>
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="main.css">
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
         <link rel="icon" href="favicon.ico" type="image/x-icon">
@@ -25,8 +26,10 @@
         <div id="maincontentback">
             <div id="maincontent">
                 <div align="center">
-                    <br /><br />
-                    <img src="6i.jpg" id="logo" />
+                    <img src="nes2.png" alt="Subscribe to our monthly webzine">
+                    <span style="font-family: 'Poppins', sans-serif; color: whitesmoke; font-size: 20px; display: inline-block;">
+                        Subscribe to our monthly webzine
+                    </span>
                 </div>
                 <br /><br />
                 <div class="col-lg-4 col-md-4 col-sm-2 col-xs-2"></div>
@@ -44,6 +47,34 @@
                                 <input class="form-control" required type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" name="useremail" id="useremail" placeholder="What is your e-mail id?">
                             </div>
                         </div>
+                        
+                        <!-- <div class="row">
+                            <label for="country">Country<span style="color: red;">*</span></label>
+                            <div class="radio">
+                                <input id="radio-1" name="country" type="radio" checked>
+                                <label for="radio-1" class="radio-label">India</label>
+                            </div>
+                            <div class="radio">
+                                <input id="radio-2" name="country" type="radio">
+                                <label  for="radio-2" class="radio-label">Outside India</label>
+                            </div>
+                        </div> -->
+
+                        <div class="row">
+
+                                <label>Country<span style="color: red;">*</span></label><br>
+                                <div class="col-lg-6" style="margin:0px; padding:0px;">
+                                    <input type="radio" name="country" id="country_1" value="small" checked />
+                                    <label class="radiolabel" for="country_1">India</label>
+                                </div>
+
+                                <div class="col-lg-6" style="margin:0px; padding:0px;">
+                                    <input type="radio" name="country" id="country_2" value="small" />
+                                    <label class="radiolabel" for="country_2">Outside India</label>
+                                </div>
+
+                        </div>
+
                         <div align="center"><br /><br />
                             <input type="submit" name="submit" id="submit" value="Sign Up" class="btn btn-primary">
                         </div>
@@ -60,8 +91,8 @@
             $(document).ready(function(){
                 var w = $(window).height();
                 var m = (w - 500) / 2;
-               if(m > 0)
-                {$("#maincontentback").css("margin-top", m+'px'); }
+               if((m - 50) > 0)
+                {$("#maincontentback").css("margin-top", (m - 50) +'px'); }
                 else{
                     $("#maincontentback").css("margin-top", "0px");
                 }
@@ -69,8 +100,8 @@
             $(window).resize(function(){
                var w = $(window).height();
                var m = (w - 500) / 2;
-               if(m > 0)
-                {$("#maincontentback").css("margin-top", m+'px'); }
+               if((m - 50) > 0)
+                {$("#maincontentback").css("margin-top", (m - 50) +'px'); }
                 else{
                     $("#maincontentback").css("margin-top", "0px");
                 }
