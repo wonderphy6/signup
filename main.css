@@ -2,9 +2,8 @@ html {
 	height: 100%;
 }
 body {
-	background: black url('wp.jpg') no-repeat;
+	background: black url('wp.jpg') no-repeat fixed;
 	background-position: bottom left;
-	height: 100%;
 }
 
 img#logo{

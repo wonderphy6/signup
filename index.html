@@ -91,8 +91,8 @@
             $(document).ready(function(){
                 var w = $(window).height();
                 var m = (w - 500) / 2;
-               if((m - 50) > 0)
-                {$("#maincontentback").css("margin-top", (m - 50) +'px'); }
+               if(m > 0)
+                {$("#maincontentback").css("margin-top", m +'px'); }
                 else{
                     $("#maincontentback").css("margin-top", "0px");
                 }
@@ -100,8 +100,8 @@
             $(window).resize(function(){
                var w = $(window).height();
                var m = (w - 500) / 2;
-               if((m - 50) > 0)
-                {$("#maincontentback").css("margin-top", (m - 50) +'px'); }
+               if(m > 0)
+                {$("#maincontentback").css("margin-top", m +'px'); }
                 else{
                     $("#maincontentback").css("margin-top", "0px");
                 }
