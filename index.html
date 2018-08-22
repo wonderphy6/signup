@@ -120,24 +120,32 @@
             
             });
                 
-            $('#signup_form').one('submit', function(){
-            var username = encodeURIComponent($('#username').val());
-            var useremail = encodeURIComponent($('#useremail').val());
-            var baseURL = 'https://docs.google.com/forms/d/1IbZvBG-dvxsrbA-LdA5PePK6PUelRRfGo68UqpiYMho/formResponse?entry.2041685849=';
-            var submitURL = (baseURL + username + '&entry.1885327188=' + useremail + '&submit=submit');
-            $(this)[0].action=submitURL;
-            //$('#username').addClass('active').val('Thank You!');
-            //$('#useremail').addClass('active').val('Thank You!');
-            setTimeout(function(){
-            $('#form-container').hide();
-            $('#update-form').animate({'width' : '0px'},300,function(){
-            $('#get-updates-link').hide();
-            });
-            },1000);
-            setTimeout(function(){
-            window.location = "thanku.html";
-            },1000);
-            });
+            // $('#signup_form').one('submit', function(){
+            // var username = encodeURIComponent($('#username').val());
+            // var useremail = encodeURIComponent($('#useremail').val());
+            // var baseURL = 'https://docs.google.com/forms/d/1IbZvBG-dvxsrbA-LdA5PePK6PUelRRfGo68UqpiYMho/formResponse?entry.2041685849=';
+            // var submitURL = (baseURL + username + '&entry.1885327188=' + useremail + '&submit=submit');
+            // $(this)[0].action=submitURL;
+            // //$('#username').addClass('active').val('Thank You!');
+            // //$('#useremail').addClass('active').val('Thank You!');
+            // setTimeout(function(){
+            // $('#form-container').hide();
+            // $('#update-form').animate({'width' : '0px'},300,function(){
+            // $('#get-updates-link').hide();
+            // });
+            // },1000);
+            // setTimeout(function(){
+            // window.location = "thanku.html";
+            // },1000);
+            // });
+
+            $('#signup_form').one('submit', () => {
+                if ($("#country_1").prop("checked"))
+                    window.location = "https://imjo.in/UFSFdA";
+                if ($("#country_2").prop("checked")) {
+                    window.location = "https://paypal.me/shubhangsati";
+                }
+            })
         </script>
     </body>
 </html>
